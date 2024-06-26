@@ -9,6 +9,7 @@ class Controller:
         self._model = model
         self._durata=None
         self._album=None
+        self._Max=None
     def handle_durata(self,e):
         self._durata=e.control.value
     def handleCreaGrafo(self, e):
@@ -30,6 +31,8 @@ class Controller:
     def handleAnalisiComp(self, e):
         return self._model.connessa(self._album)
         pass
-
+    def handleMax(self,e):
+        self._Max = e.control.value
     def handleGetSetAlbum(self, e):
+        self._model.handleRicorsione(self._album,float(self._Max))
         pass

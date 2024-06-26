@@ -45,7 +45,7 @@ class View(ft.UserControl):
         self._page.controls.append(row2)
 
         #ROW3
-        self._txtInSoglia = ft.TextField(label="Soglia")
+        self._txtInSoglia = ft.TextField(label="Soglia", on_change=self._controller.handleMax)
         self._btnSetAlbum = ft.ElevatedButton(text="Set di Album",
                                                on_click=self._controller.handleGetSetAlbum)
         row3 = ft.Row([
