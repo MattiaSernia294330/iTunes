@@ -24,7 +24,7 @@ class View(ft.UserControl):
         self._page.controls.append(self._title)
 
         #ROW1
-        self._txtInDurata = ft.TextField(label="Durata")
+        self._txtInDurata = ft.TextField(label="Durata", on_change=self._controller.handle_durata)
         self._btnCreaGrafo = ft.ElevatedButton(text="Crea Grafo",
                                                on_click=self._controller.handleCreaGrafo)
         row1 = ft.Row([
